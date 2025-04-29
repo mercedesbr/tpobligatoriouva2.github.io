@@ -1,4 +1,4 @@
-/* Estilo Global */
+
 html, body {
   font-family: 'Open Sans', sans-serif;
   background-color: #f5f5f5;
@@ -37,6 +37,9 @@ nav a {
 
 nav a:hover {
   background-color: #E5BB89;
+}
+a{
+  color: #6F5D44;
 }
 
 /* Contenedor principal */
@@ -220,6 +223,9 @@ form input, button{
 form button:hover {
   background-color: #dfa155;
 }
+
+
+
 
 /* Footer */
 footer {
