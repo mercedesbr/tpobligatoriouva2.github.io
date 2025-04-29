@@ -271,7 +271,11 @@ footer {
   .foto-perfil {
     width: 80%;
   }
-
+  
+  .formulario {
+    padding: 20px 10px;
+  }
+  
   .form-section {
     padding: 50px;
   }
