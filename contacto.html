@@ -28,19 +28,16 @@
                       <h2>Ingrese su mensaje:</h2>
                       <form>
                           <label for="nombre">Nombre completo:</label>
-                          <input type="text" id="nombre" name="nombre" required />
-    
+                          <input type="text" id="nombre" placeholder="Nombre">    
                           <label for="email">Correo electrónico:</label>
-                          <input type="email" id="email" name="email" required />
-    
+                          <input type="text" id="email" placeholder="Email">    
                           <label for="asunto">Asunto:</label>
-                          <input type="text" id="asunto" name="telefono" required />
-
-                          <label for="telefono">Mensaje:</label>
-                          <input type="tel" id="mensaje" name="telefono" required />
-    
-                          <button type="submit">Enviar</button>
+                          <input type="text" id="asunto" placeholder="Asunto">
+                          <label for="mensaje">Mensaje:</label>
+                          <input type="text" id="mensaje" placeholder="Mensaje">    
+                          <button onclick="mostrarMensaje(event)">Enviar</button>
                       </form>
+                      <p id="mensajeConfirmacion"></p>
                   </section>
               </div>
 
@@ -51,5 +48,6 @@
             <p>&copy; 2025 UADE - Cátedra de Desarrollo Web</p>
           </footer>
       </div>
+      <script src="js/script.js"></script>
 </body>
 </html>
