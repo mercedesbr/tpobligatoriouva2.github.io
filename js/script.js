@@ -26,3 +26,29 @@ function mostrarMensaje(event){
     const links = document.querySelector('.menu-links');
     links.classList.toggle('show');
   }
+  
+  function toggleModoSubmenu() {
+    const submenu = document.querySelector('.modo-submenu');
+    submenu.classList.toggle('show');
+  }
+  
+  // Función para establecer tema
+  function setTheme(mode) {
+    if (mode === 'dark') {
+      document.body.classList.add('dark-mode');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.body.classList.remove('dark-mode');
+      localStorage.setItem('theme', 'light');
+    }
+    // Ocultar submenú después de elegir
+    document.querySelector('.modo-submenu').classList.remove('show');
+  }
+  
+  // Aplicar tema guardado al cargar
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark') {
+      document.body.classList.add('dark-mode');
+    }
+  });
