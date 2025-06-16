@@ -22,3 +22,7 @@ function mostrarMensaje(event){
     let mensajeEnvio = `Hola, ${nombre}! Gracias por tu mensaje, en breve nos estaremos comunicando contigo.`;
     contenedorMensaje.textContent = mensajeEnvio;
   }
+  function toggleMenu() {
+    const links = document.querySelector('.menu-links');
+    links.classList.toggle('show');
+  }

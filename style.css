@@ -53,6 +53,14 @@ a {
   padding: 20px;
   margin-bottom: 20px;
 }
+.menu-toggle {
+  display: none;
+  font-size: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
 nav ul {
   list-style: none;
   display: flex;
@@ -259,9 +267,6 @@ footer {
     width: 90%;
   }
 
-  .menu {
-    padding: 15px;
-  }
   .perfil {
     flex-direction: column;
     align-items: center;
@@ -278,5 +283,28 @@ footer {
   
   .form-section {
     padding: 50px;
+  }
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .menu-links {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+
+  .menu-links.show {
+    display: flex;
+  }
+
+  .menu nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
