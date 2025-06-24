@@ -24,18 +24,18 @@ function mostrarMensaje(event){
     contenedorMensaje.textContent = mensajeEnvio;
     contenedorMensaje.style.color = "green";
   }
-  function toggleMenu() {
+function toggleMenu() {
     const links = document.querySelector('.menu-links');
     links.classList.toggle('show');
   }
   
-  function toggleModoSubmenu() {
+function toggleModoSubmenu() {
     const submenu = document.querySelector('.modo-submenu');
     submenu.classList.toggle('show');
   }
   
   // Función para establecer tema
-  function setTheme(mode) {
+function setTheme(mode) {
     if (mode === 'dark') {
       document.body.classList.add('dark-mode');
       localStorage.setItem('theme', 'dark');
@@ -47,8 +47,8 @@ function mostrarMensaje(event){
     document.querySelector('.modo-submenu').classList.remove('show');
   }
   
-  // Aplicar tema guardado al cargar
-  window.addEventListener('DOMContentLoaded', () => {
+// Aplicar tema guardado al cargar
+window.addEventListener('DOMContentLoaded', () => {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
       document.body.classList.add('dark-mode');
