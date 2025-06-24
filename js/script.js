@@ -7,7 +7,7 @@ function mostrarMensaje(event) {
   let mensaje = document.getElementById("mensaje").value;
 
   let contenedorMensaje = document.getElementById("mensajeConfirmacion");
-  let regexEmail = /^[^\s@]+@[^\s@]+\.com$/;
+  let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (!nombre || !email || !asunto || !mensaje) {
     contenedorMensaje.textContent = "Por favor, completa todos los campos.";
