@@ -1,13 +1,15 @@
 function mostrarMensaje(event) {
   event.preventDefault();
 
-  let nombre = document.getElementById("nombre").value;
-  let email = document.getElementById("email").value;
-  let asunto = document.getElementById("asunto").value;
-  let mensaje = document.getElementById("mensaje").value;
+  let nombre = document.getElementById("nombre").value.trim();
+  let email = document.getElementById("email").value.trim();
+  let asunto = document.getElementById("asunto").value.trim();
+  let mensaje = document.getElementById("mensaje").value.trim();
 
   let contenedorMensaje = document.getElementById("mensajeConfirmacion");
-  let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  // CORREGIDA: Solo emails que terminen en .com
+  let regexEmail = /^[^\s@]+@[^\s@]+\.com$/i;
 
   if (!nombre || !email || !asunto || !mensaje) {
     contenedorMensaje.textContent = "Por favor, completa todos los campos.";
@@ -16,7 +18,7 @@ function mostrarMensaje(event) {
   }
 
   if (!regexEmail.test(email)) {
-    contenedorMensaje.textContent = "Por favor, ingresa un correo electrónico válido.";
+    contenedorMensaje.textContent = "Por favor, ingresa un correo electrónico válido que termine en .com.";
     contenedorMensaje.style.color = "red";
     return;
   }
