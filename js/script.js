@@ -7,8 +7,6 @@ function mostrarMensaje(event) {
   let mensaje = document.getElementById("mensaje").value.trim();
 
   let contenedorMensaje = document.getElementById("mensajeConfirmacion");
-
-  // CORREGIDA: Solo emails que terminen en .com
   let regexEmail = /^[^\s@]+@[^\s@]+\.com$/i;
 
   if (!nombre || !email || !asunto || !mensaje) {
