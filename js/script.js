@@ -16,11 +16,13 @@ function mostrarMensaje(event){
     
     if (!regexEmail.test(email)) {
         contenedorMensaje.textContent = "Por favor, ingresa un correo electrónico válido.";
+        contenedorMensaje.style.color = "red"; 
         return;
     }
 
     let mensajeEnvio = `Hola, ${nombre}! Gracias por tu mensaje, en breve nos estaremos comunicando contigo.`;
     contenedorMensaje.textContent = mensajeEnvio;
+    contenedorMensaje.style.color = "green";
   }
   function toggleMenu() {
     const links = document.querySelector('.menu-links');
